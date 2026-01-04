@@ -192,7 +192,7 @@ class Database {
             result = await this.nativeActions.callNative_Async(
                     'Transaction_Start')
         } catch (e) {
-            throw new DatabaseNativeError(e);
+            throw new DatabaseNativeError(e.toString());
         }
 
         if (abDatabaseNative.debug)
